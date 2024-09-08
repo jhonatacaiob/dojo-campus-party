@@ -16,4 +16,3 @@ pessoas = [
 
 
 shuffle(pessoas)
-print(pessoas)

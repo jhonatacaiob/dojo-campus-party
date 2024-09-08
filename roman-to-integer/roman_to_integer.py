@@ -9,16 +9,13 @@ class Solution:
                 'D': 500,
                 'M': 1000,
             }
-        s = s[::-1]
-        a = 0
-        u = 0
-        for i in s:
-            if algarismo[i] < u:
-                a -= algarismo[i]
+
+        ans = 0
+        for i in range(len(s)):
+            if i < len(s) - 1 and algarismo[s[i]] < algarismo[s[i + 1]]:
+                ans -= algarismo[s[i]]
             else:
-                a += algarismo[i]
-            u = algarismo[i]
-        return a
+                ans += algarismo[s[i]] 
 
+        return ans
 
-    
